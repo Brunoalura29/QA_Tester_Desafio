@@ -78,45 +78,32 @@ todos os testes foram feitos avaliando a usabilidade e comportamentos esperados 
 
 ---
 
-  - ## 📁 Estrutura Sugerida para Automatização
-
-bash
-project/
-│
-├── cypress/ (ou playwright/)
-│   ├── e2e/
-│   ├── pages/
-│   └── support/
-│
-├── tests/
-│   └── ui/
-│
-├── README.md
-├── package.json
-└── .gitignore
-`
----
+  
 
 ## Etapa 2 : Desenvolvimento dos testes automatizados de UI
 
 ### Este projeto contém a automação dos testes de interface do usuário (UI) desenvolvidos com base nos cenários definidos na Etapa 1 do desafio técnico de QA.
 
 🚀 Tecnologias
-[Node.js] - plataforma de desenvolvimento
-[TypesScript] - Superset do Javascript s2
-[Playwright] - framework de testes automatizados
+- [Node.js] - plataforma de desenvolvimento
+  
+- [TypesScript] - Superset do Javascript s2
+  
+- [Playwright] - framework de testes automatizados
+  
 👨🏻‍💻 Como executar o projeto
+
 Node.js v16 ou superior para executar.
 
 Abra o Prompt de comandos como Administrador e ative o Yarn por meio do Corepack executando o comando abaixo:
-
-corepack enable
+- corepack enable
+  
 Execute os comandos abaixo para instalar das dependências do projeto e execução dos testes:
 
-cd playwright-validando-toaster
-yarn install
-npx playwright install
-npx playwright test
+- cd playwright-validando-toaster
+- yarn install
+- npx playwright install
+- npx playwright test
 
 📌 Executar testes em navegadores específicos
   
