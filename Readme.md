@@ -3,19 +3,18 @@
 ## Aqui compartilharei o passo a passo para execução dos testes do desafio QA.
 
 ## Etapa 1 : Desenvolvimento dos testes - Modo Step By Step
-Todos os testes da primeira etapa foram definidos com base na página de login do sistema Serverest:  
+Todos os testes da primeira e segunda etapa foram definidos com base na página de login do sistema Serverest:  
 🔗 https://front.serverest.dev/login
 
   A base de dados é limpa diariamente, então os testes consideram esse comportamento,
 todos os testes foram feitos avaliando a usabilidade e comportamentos esperados pela interface.
-
 
 ### 🔹 Cenário 1 – Login com sucesso
 
 - *Condição de Teste:* Usuário válido já cadastrado no sistema.
 - *Pré-Condição:* Acesso ao site de login.
 - *Passo a Passo:*
-  - Acessar https://front.serverest.dev/login
+  - Acessar a página de login
   - Inserir e-mail e senha válidos
   - Clicar no botão "Login"
 - *Resultado Esperado:* Usuário deve ser redirecionado para a página inicial do sistema de compras.
@@ -44,6 +43,7 @@ todos os testes foram feitos avaliando a usabilidade e comportamentos esperados 
 - *Condição de Teste:* Usuário válido cadastrado.
 - *Pré-Condição:* Acesso ao site.
 - *Passo a Passo:*
+  - Acessar a página de login
   - Inserir e-mail válido
   - Inserir senha incorreta
   - Clicar em "Login"
@@ -71,6 +71,7 @@ todos os testes foram feitos avaliando a usabilidade e comportamentos esperados 
 - *Condição de Teste:* Página de login aberta.
 - *Pré-Condição:* Acesso ao site.
 - *Passo a Passo:*
+  - Acessar a página de login
   - Clicar no botão "Cadastre-se"
 - *Resultado Esperado:* Redirecionamento para a página de cadastro.
 - *Motivo:* Garantir navegação correta entre páginas.
@@ -83,13 +84,15 @@ todos os testes foram feitos avaliando a usabilidade e comportamentos esperados 
 ### Este projeto contém a automação dos testes de interface do usuário (UI) desenvolvidos com base nos cenários definidos na Etapa 1 do desafio técnico de QA.
 
 🚀 Tecnologias
+- [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Playwright](https://playwright.dev/)
   
 👨🏻‍💻 Como executar o projeto
-
-Node.js v16 ou superior para executar.
+- Clone o projeto 
+- Node.js v16 ou superior
+- Yarn (ativado via Corepack)
 
 Abra o Prompt de comandos como Administrador e ative o Yarn por meio do Corepack executando o comando abaixo:
 ```bash
@@ -97,22 +100,22 @@ Abra o Prompt de comandos como Administrador e ative o Yarn por meio do Corepack
   ```
 Execute os comandos abaixo para instalar das dependências do projeto e execução dos testes:
 ```bash
-- cd playwright-validando-toaster
 - yarn install
 - npx playwright install
+```
+📌 Executar testes
+```bash
 - npx playwright test
 ```
 📌 Executar testes em navegadores específicos
-  
+  ```bash
 - Chromium (Chrome): npx playwright test --project=chromium
-
 - Firefox: npx playwright test --project=firefox
-
 - WebKit (Safari): npx playwright test --project=webkit
- 
+ ```
 ## Etapa 3: Desenvolvimento dos Testes Automatizados de API
 
-### Rodando os testes de API:
+### Os testes automatizados de API validam os seguintes endpoints da aplicação::
 - GET/ produtos
 - POST /produtos
 
@@ -121,7 +124,6 @@ Certifique-se de ter as dependências instaladas:
 ```bash
 npm install
 npx playwright install
-npm install -D playwright
 ```
 
 Para rodar os testes de api execute:
