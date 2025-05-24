@@ -2,7 +2,7 @@
 
 ## Aqui compartilharei o passo a passo para execução dos testes do desafio QA.
 
-### Etapa 1 : Desenvolvimento dos testes - Modo Step By Step
+## Etapa 1 : Desenvolvimento dos testes - Modo Step By Step
 Todos os testes da primeira etapa foram definidos com base na página de login do sistema Serverest:  
 🔗 https://front.serverest.dev/login
 
@@ -78,33 +78,30 @@ todos os testes foram feitos avaliando a usabilidade e comportamentos esperados 
 
 ---
 
-  
-
 ## Etapa 2 : Desenvolvimento dos testes automatizados de UI
 
 ### Este projeto contém a automação dos testes de interface do usuário (UI) desenvolvidos com base nos cenários definidos na Etapa 1 do desafio técnico de QA.
 
 🚀 Tecnologias
-- [Node.js] - plataforma de desenvolvimento
-  
-- [TypesScript] - Superset do Javascript s2
-  
-- [Playwright] - framework de testes automatizados
+- [Node.js](https://nodejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Playwright](https://playwright.dev/)
   
 👨🏻‍💻 Como executar o projeto
 
 Node.js v16 ou superior para executar.
 
 Abra o Prompt de comandos como Administrador e ative o Yarn por meio do Corepack executando o comando abaixo:
+```bash
 - corepack enable
-  
+  ```
 Execute os comandos abaixo para instalar das dependências do projeto e execução dos testes:
-
+```bash
 - cd playwright-validando-toaster
 - yarn install
 - npx playwright install
 - npx playwright test
-
+```
 📌 Executar testes em navegadores específicos
   
 - Chromium (Chrome): npx playwright test --project=chromium
@@ -112,3 +109,22 @@ Execute os comandos abaixo para instalar das dependências do projeto e execuç�
 - Firefox: npx playwright test --project=firefox
 
 - WebKit (Safari): npx playwright test --project=webkit
+ 
+## Etapa 3: Desenvolvimento dos Testes Automatizados de API
+
+### Rodando os testes de API:
+- GET/ produtos
+- POST /produtos
+
+Certifique-se de ter as dependências instaladas:
+
+```bash
+npm install
+npx playwright install
+npm install -D playwright
+```
+
+Para rodar os testes de api execute:
+```bash
+- npm run test:api
+```
