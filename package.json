@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "npx playwright test",
-    "allure:report": "allure generate allure-results -o allure-report --clean"
+    "allure:report": "allure generate allure-results -o allure-report --clean",
+    "test:api": "npx playwright test tests/api"
   },
   "devDependencies": {
     "@playwright/test": "^1.22.2",
